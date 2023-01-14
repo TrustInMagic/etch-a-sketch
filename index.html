@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Etch-a-Sketch</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="content">
+      <div class="menu">
+        <input class="color" type="color">
+        <button class="color-mode">Color mode</button>
+        <button class="rainbow-mode">Rainbow mode</button>
+        <button class="eraser">Eraser</button>
+        <button class="clear">Clear</button>
+        <div class="slider">
+          <p id="rangeValue">16</p>
+          <input type="range" min="1" max="100" value="16" oninput="rangeValue.innerText = this.value">
+        </div>      
+      </div>
+      <div class="sketching-board">
+
+      </div>
+    </div>
+  </body>
+</html>

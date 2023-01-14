@@ -1,0 +1,62 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(236, 236, 236);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.sketching-board {
+  background-color: aquamarine;
+  height: 500px;
+  width: 500px;
+  margin-left: 80px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: -0px;
+
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  height: 40px;
+  width: 180px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.color {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  align-self: center;
+  overflow: hidden;
+}
+
+input[type="range"] {
+  width: 180px; 
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+#rangeValue {
+  align-self: center;
+}
+

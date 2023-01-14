@@ -11,10 +11,13 @@ html {
 }
 
 .sketching-board {
-  background-color: aquamarine;
+  background-color: white;
   height: 500px;
   width: 500px;
   margin-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 .menu {
@@ -60,3 +63,6 @@ input[type="range"] {
   align-self: center;
 }
 
+.hovered {
+  background-color: aqua;
+}

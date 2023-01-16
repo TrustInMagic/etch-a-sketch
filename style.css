@@ -37,7 +37,7 @@ h1 {
 button {
   height: 40px;
   width: 180px;
-  border-radius: 5px;
+  border-radius: 5%;
   cursor: pointer;
   font-size: 18px;
 }
@@ -59,8 +59,9 @@ input[type="range"] {
   flex-direction: column;
 }
 
-#rangeValue {
+.range-value {
   align-self: center;
+  font-weight: 800;
 }
 
 .hovered {

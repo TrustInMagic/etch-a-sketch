@@ -8,6 +8,7 @@ function drawBoxes(boxNumberOnSide){
 
 function start() {
   boxNumberOnSide = boxNumberInput.value;
+  sliderValue.textContent = `Grid: ${boxNumberInput.value} X ${boxNumberInput.value}`;
   sketchingBoard.innerHTML = "";
   drawBoxes(boxNumberOnSide);
   let boxes = document.querySelectorAll(".box");
@@ -45,5 +46,6 @@ let sketchingBoard = document.querySelector(".sketching-board");
 let boxNumberInput = document.querySelector(".slider input");
 let colorInput = document.querySelector(".color");
 let clear = document.querySelector(".clear");
+let sliderValue = document.querySelector(".range-value");
 
 start();

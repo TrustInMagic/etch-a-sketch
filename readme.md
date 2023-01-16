@@ -1,6 +1,6 @@
 # etch-a-sketch
 
-live: 
+live: https://trustinmagic.github.io/etch-a-sketch/
 
 My version of an Etch a Sketch game .
 

@@ -15,9 +15,9 @@ html {
   height: 500px;
   width: 500px;
   margin-left: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-rows), 1fr);
+  grid-template-rows: repeat(var(--grid-columns), 1fr);
 }
 
 .menu {
@@ -66,3 +66,4 @@ input[type="range"] {
 .hovered {
   background-color: aqua;
 }
+

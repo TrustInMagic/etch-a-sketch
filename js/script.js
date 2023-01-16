@@ -6,30 +6,44 @@ function drawBoxes(boxNumberOnSide){
   }
 }
 
-function reset () {
+function start() {
   boxNumberOnSide = boxNumberInput.value;
   sketchingBoard.innerHTML = "";
   drawBoxes(boxNumberOnSide);
   let boxes = document.querySelectorAll(".box");
 
   for (let box of boxes) {
-    box.addEventListener("mouseover", () => changeColor(box));
+    box.addEventListener("mouseenter", () => changeColor(box));
+    box.style.cssText = `--color: ${colorInput.value}`;
   }
+
+  boxNumberInput.addEventListener("input", () => start())
+
+  colorInput.addEventListener("input", () => {
+    boxes.forEach((box) => {
+      if (box.className !== "box hovered") {
+        box.style.cssText = `--color: ${colorInput.value}`
+      }
+    })
+  })
+
+  clear.addEventListener("click", () => {
+    boxes.forEach((box) => removeColor(box));
+  }); 
+
 }
 
 function changeColor(element) {
-  element.classList.add("hovered")
+  element.classList.add("hovered");
+}
+
+function removeColor(element) {
+  element.classList.remove("hovered");
 }
 
 let sketchingBoard = document.querySelector(".sketching-board");
 let boxNumberInput = document.querySelector(".slider input");
-let boxNumberOnSide = boxNumberInput.value;
+let colorInput = document.querySelector(".color");
+let clear = document.querySelector(".clear");
 
-drawBoxes(boxNumberOnSide);
-let boxes = document.querySelectorAll(".box");
-
-boxNumberInput.addEventListener("input", () => reset())
-
-for (let box of boxes) {
-  box.addEventListener("mouseover", () => changeColor(box));
-}
+start();

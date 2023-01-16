@@ -64,6 +64,6 @@ input[type="range"] {
 }
 
 .hovered {
-  background-color: aqua;
+  background-color: var(--color);
 }
 
